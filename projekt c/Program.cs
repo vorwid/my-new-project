@@ -46,21 +46,20 @@ namespace cwiczenia
                     Console.WriteLine("Delta < 0 \n");
                     Console.WriteLine("Nie można policzyć delty \n");
                 }
+                else if (delta == 0)
+                {
+                    double wynik;
+                    wynik = -parametrB / 2 * parametrA;
+                    Console.WriteLine("x= " + wynik);
+                }
+
                 else
                 {
                     double wynik;
-                    if (delta == 0)
-                    {
-                        wynik = -parametrB / 2 * parametrA;
-                        Console.WriteLine("x= " + wynik);
-                    }
-                    else
-                    {
-                        wynik = -parametrB + Math.Sqrt(delta) / (2 * parametrA);
-                        Console.WriteLine("x1 = " + wynik);
-                        wynik = -parametrB - Math.Sqrt(delta) / (2 * parametrA);
-                        Console.WriteLine("x2= " + wynik);
-                    }
+                    wynik = -parametrB + Math.Sqrt(delta) / (2 * parametrA);
+                    Console.WriteLine("x1 = " + wynik);
+                    wynik = -parametrB - Math.Sqrt(delta) / (2 * parametrA);
+                    Console.WriteLine("x2= " + wynik);
                 }
             }
         }
